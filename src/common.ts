@@ -18,7 +18,7 @@ export function sanitize(text: string) {
     return null;
   }
 
-  text = text.replace(/[.,?!:;'"`]$/g, '').trim();
+  text = text.replace(/[.,?!:;'"`%]$/g, '').trim();
 
   // Filter out angular interpolations.
   if (
@@ -44,7 +44,8 @@ export function sanitize(text: string) {
 
   // Check for special single words.
   if (text.split(' ').length === 1) {
-    if (!isNaN(text as any) || text.startsWith('#') || text.startsWith('$')) {
+    // Ignore if word is a number of starts not from a letter.
+    if (!isNaN(text as any) || text[0].toLowerCase() === text[0].toUpperCase()) {
       return null;
     }
 

@@ -10,7 +10,8 @@ $ yarn build
 $ yarn start ../master/kibana/ # path to kibana source root or any folder within it.
 ```
 
-In console you should see something like this:
+In console you should see something similar to the screenshot below. Strings in green were accepted and strings in red
+were ignored.
 
 ![alt text](https://raw.githubusercontent.com/azasypkin/kbn-i18n/master/screenshots/output.png)
 
