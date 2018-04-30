@@ -1,11 +1,13 @@
 # What `kbn-i18n` is?
 Tool that traverses through all `.js` and `.html` files in any folder within Kibana and extracts all potentially localizable message strings.
 
+There are quite a few false positives, but should give a general idea nevertheless.
+
 # Usage
 
 ```bash
 $ yarn build
-$ node cli /path/to/kibana/source/root/or/folder/within/kibana
+$ yarn start ../master/kibana/ # path to kibana source root or any folder within it.
 ```
 
 In console you should see something like this:

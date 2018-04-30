@@ -7,6 +7,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch --progress",
+    "start": "node cli",
     "prettier": "prettier --write './src/**/*.ts'"
   },
   "devDependencies": {
